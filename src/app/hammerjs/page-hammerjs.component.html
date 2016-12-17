@@ -1,0 +1,17 @@
+<div class="ctn">
+  <div class="inner-ctn">
+    <h4 class="ui header medium center aligned">
+      Swipe Avatars with HammerJS
+      <div class="sub header">(swipe left or right)</div>
+    </h4>
+    <div class="ui card swipe-box" *ngFor="let avatar of avatars; let idx=index" (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)"
+      [class.visible]="avatar.visible" [class.hidden]="!avatar.visible">
+      <div class="image">
+        <img [src]="avatar.image" [alt]="avatar.name">
+      </div>
+      <div class="content">
+        <a class="header">{{avatar.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>

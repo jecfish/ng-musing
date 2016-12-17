@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 // routing
 import { appRoutes } from './app.routing';
@@ -15,13 +16,14 @@ import { PageTemplateDrivenFrmComponent } from './template-driven-frm';
 import { PageModelDrivenFrmComponent } from './model-driven-frm';
 import { PageNestedModelDrivenFrmComponent } from './nested-model-driven-frm';
 import { PageConditionalValModelDrivenFrmComponent } from './conditional-val-model-driven-frm';
+import { PageHammerjsComponent, MyHammerConfig } from './hammerjs';
+import { PageCustomValidatorComponent, EqualValidatorDirective } from './custom-validator';
 
 @NgModule({
   declarations: [
     AppComponent,
     // implement pipe
-    PageGlobalPipeComponent,
-    CapitalizePipe,
+    PageGlobalPipeComponent, CapitalizePipe,
     // dealing with different form controls
     PageDiffFormCtrlsComponent,
     // template driven form
@@ -32,6 +34,10 @@ import { PageConditionalValModelDrivenFrmComponent } from './conditional-val-mod
     PageNestedModelDrivenFrmComponent,
     // conditional validation model driven form
     PageConditionalValModelDrivenFrmComponent,
+    // using hammerjs
+    PageHammerjsComponent,
+    // implement a Custom Validator Directive (Confirm Password)
+    PageCustomValidatorComponent, EqualValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { PageConditionalValModelDrivenFrmComponent } from './conditional-val-mod
     HttpModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

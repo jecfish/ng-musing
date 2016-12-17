@@ -1,0 +1,65 @@
+<div class="container">
+  <h1>Add user</h1>
+  <form #f="ngForm" novalidate>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="user.name">
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="radio" *ngFor="let gender of genders">
+        <label>
+          <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value">
+          {{gender.display}}
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Role</label>
+      <select name="role" class="form-control" [(ngModel)]="user.role">
+        <option *ngFor="let role of roles" [value]="role.value">{{role.display}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Theme</label>
+      <select name="theme" class="form-control" [(ngModel)]="user.theme">
+        <option *ngFor="let theme of themes" [ngValue]="theme">{{theme.display}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="isActive" [(ngModel)]="user.isActive">
+          Is Active
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Topics</label>
+      <select multiple name="topics" class="form-control" [(ngModel)]="user.topics">
+        <option *ngFor="let topic of topics" [value]="topic.value">{{topic.display}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="hidden" name="toggle" [(ngModel)]="user.toggle">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" [checked]="user.toggle === toggles[0].value" 
+              (change)="$event.target.checked? (user.toggle = toggles[0].value) : (user.toggle = toggles[1].value)">
+          {{ toggles[0].display }}
+        </label>
+      </div>
+    </div>
+    <button type="submit" (click)="save(f.value, f.valid)" class="btn btn-default">Submit</button>
+  </form>
+  <div style="margin-top: 20px" *ngIf="f">
+    <div>Form details:-</div>
+    <pre>Is form valid?: <br>{{f.valid | json}}</pre>
+    <pre>Is form submitted?: <br>{{f.submitted | json}}</pre>
+    <pre>submitted value: <br>{{f.value | json}}</pre>
+  </div>
+</div>

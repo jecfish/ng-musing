@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Add user</h1>
+  <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" 
+        name="name" [(ngModel)]="user.name" 
+        #name="ngModel" required minlength="5">
+      <small [hidden]="name.valid || (name.pristine && !f.submitted)" class="text-danger">
+            Name is required (minimum 5 characters).
+          </small>
+      <!--<pre>{{name.errors | json}}</pre>-->
+    </div>
+    <div ngModelGroup="address">
+      <div class="form-group">
+        <label>Street</label>
+        <input type="text" class="form-control" 
+          name="street" [(ngModel)]="user.address.street"
+          #street="ngModel" required>
+        <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="text-danger">
+          Street is required.
+        </small>
+      </div>
+      <div class="form-group">
+        <label>Post code</label>
+        <input type="text" class="form-control" 
+          name="postcode" [(ngModel)]="user.address.postcode">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <div class="margin-20">
+    <div>Form details:-</div>
+    <pre>Is form valid?: <br>{{f.valid | json}}</pre>
+    <pre>Is form submitted?: <br>{{f.submitted | json}}</pre>
+    <pre>form value: <br>{{f.value | json}}</pre>
+  </div>
+</div>

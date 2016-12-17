@@ -1,0 +1,1 @@
+export * from './page-template-driven-frm.component';

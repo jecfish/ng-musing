@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="margin-20">
+        <h4>Add customer</h4>
+      </div>
+      <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <!--payment method-->
+        <div class="form-group">
+          <label>Payment Method</label>
+        </div>
+        <div formGroupName="paymentMethod">
+          
+          <div class="row">
+            <div class="col-xs-6">
+              <button type="button" (click)="setPaymentMethodType(PAYMENT_METHOD_TYPE.BANK)" 
+                class="btn btn-block text-capitalize"
+                [class.btn-default]="myForm.controls.paymentMethod.controls.type.value !== PAYMENT_METHOD_TYPE.BANK" 
+                [class.btn-primary]="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.BANK">
+                {{ PAYMENT_METHOD_TYPE.BANK }}
+              </button>
+            </div>
+            <div class="col-xs-6">
+              <button type="button" (click)="setPaymentMethodType(PAYMENT_METHOD_TYPE.CARD)" 
+                class="btn btn-block text-capitalize"
+                [class.btn-default]="myForm.controls.paymentMethod.controls.type.value !== PAYMENT_METHOD_TYPE.CARD" 
+                [class.btn-primary]="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.CARD">
+                {{ PAYMENT_METHOD_TYPE.CARD }}
+              </button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 panel panel-default margin-20" 
+            *ngIf="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.BANK">
+            <div class="panel-body">
+              <div class="form-group col-xs-8" formGroupName="bank">
+                <label>Account no.</label>
+                <input type="text" class="form-control" formControlName="accountNo">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.accountNo.valid" 
+                  class="text-danger">
+                 Required.
+                </small>
+              </div>
+              <div class="form-group col-xs-4" formGroupName="bank">
+                <label>Routing no.</label>
+                <input type="text" class="form-control" formControlName="routingNo">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.routingNo.valid" 
+                  class="text-danger">
+                 Required.
+                </small>
+              </div>
+              <div class="form-group col-xs-12" formGroupName="bank">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="accountHolder">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.accountHolder.valid" 
+                  class="text-danger">
+                 Required.
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 panel panel-default margin-20" 
+            *ngIf="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.CARD">
+            <div class="panel-body">
+              <div class="form-group col-xs-8" formGroupName="card">
+                <label>Card no.</label>
+                <input type="text" class="form-control" formControlName="cardNo">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.cardNo.valid" 
+                  class="text-danger">
+                 Required (Must be valid card number).
+                </small>
+              </div>
+              <div class="form-group col-xs-4" formGroupName="card">
+                <label>Expiry</label>
+                <input type="text" formControlName="expiry"
+                  placeholder="MM/YY" class="form-control">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.expiry.valid" 
+                  class="text-danger">
+                 Required (Must be in format MM/YY).
+                </small>
+              </div>
+              <div class="form-group col-xs-12" formGroupName="card">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="cardHolder">
+                <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.cardHolder.valid" 
+                  class="text-danger">
+                 Required.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="margin-20">
+          <button type="submit" class="btn btn-primary pull-right" [disabled]="!myForm.valid">Submit</button>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="margin-20">
+          <div>myForm details:-</div>
+          <pre>Is myForm valid?: <br>{{myForm.valid | json}}</pre>
+          <pre>form value: <br>{{myForm.value | json}}</pre>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

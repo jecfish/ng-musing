@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="margin-20">
+        <h4>Add customer</h4>
+      </div>
+      <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value)">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name">
+          <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+              Name is required (minimum 5 characters).
+            </small>
+        </div>
+        <!--addresses-->
+        <div formArrayName="addresses">
+          <div *ngFor="let address of myForm.controls.addresses.controls; let i=index" class="col-xs-12 panel panel-default">
+            <div class="panel-heading">
+              <span>Address {{i + 1}}</span>
+              <span class="glyphicon glyphicon-remove pull-right" *ngIf="myForm.controls.addresses.controls.length > 1" (click)="removeAddress(i)"></span>
+            </div>
+            <div class="panel-body" [formGroupName]="i">
+              <div class="form-group col-xs-6">
+                <label>street</label>
+                <input type="text" class="form-control" formControlName="street">
+                <small [hidden]="myForm.controls.addresses.controls[i].controls.street.valid" class="text-danger">
+                    Street is required
+                </small>
+              </div>
+              <div class="form-group col-xs-6">
+                <label>postcode</label>
+                <input type="text" class="form-control" formControlName="postcode">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="margin-20">
+          <a (click)="addAddress()" href="javascript:void(0)" style="cursor: default">
+            Add another address +
+          </a>
+        </div>
+
+        <div class="margin-20">
+          <button type="submit" class="btn btn-primary pull-right" [disabled]="!myForm.valid">Submit</button>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="margin-20">
+          <div>myForm details:-</div>
+          <pre>Is myForm valid?: <br>{{myForm.valid | json}}</pre>
+          <pre>form value: <br>{{myForm.value | json}}</pre>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

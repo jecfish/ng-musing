@@ -1,0 +1,80 @@
+[
+  { 
+    "name": "Create a Globally Available Custom Pipe in Angular", 
+    "url": "https://scotch.io/?p=13431", 
+    "demo": "global-pipe",
+    "desc": "" 
+  },
+  { 
+    "name": "How to Deal with Different Form Controls in Angular", 
+    "url": "https://scotch.io/?p=13444", 
+    "demo": "diff-form-ctrls",
+    "desc": "" 
+  },
+  { 
+    "name": "Using Angular's Template-Driven Forms", 
+    "url": "https://scotch.io/?p=13446", 
+    "demo": "template-driven-frm",
+    "desc": "" 
+  },
+  { 
+    "name": "Using Angular's Model-Driven Forms", 
+    "url": "https://scotch.io/?p=13438", 
+    "demo": "model-driven-frm",
+    "desc": "" 
+  },
+  { 
+    "name": "How to Build Nested Model-driven Forms in Angular", 
+    "url": "https://scotch.io/?p=13483", 
+    "demo": "nested-model-driven-frm",
+    "desc": "" 
+  },
+  { 
+    "name": "How to Implement Conditional Validation in Angular Model-driven Forms", 
+    "url": "https://scotch.io/?p=13497", 
+    "demo": "conditional-val-model-driven-frm",
+    "desc": "" 
+  },
+  { 
+    "name": "Simple Language Translation in Angular (Part 1)", 
+    "url": "https://scotch.io/?p=13499", 
+    "demo": "hammerjs",
+    "desc": "" 
+  },
+  { 
+    "name": "Simple Language Translation in Angular (Part 2)", 
+    "url": "https://scotch.io/?p=13501", 
+    "demo": "simple-language-translation-part-1",
+    "desc": "" 
+  },
+  { 
+    "name": "Using HammerJS (Touch gesture) in Angular", 
+    "url": "https://scotch.io/?p=13550", 
+    "demo": "simple-language-translation-part-2",
+    "desc": "" 
+  },
+  { 
+    "name": "How to Implement a Custom Validator Directive (Confirm Password) in Angular", 
+    "url": "https://scotch.io/?p=13552",
+    "demo": "custom-validator", 
+    "desc": "" 
+  },
+  { 
+    "name": "Getting to Know Angular's Module: @NgModule", 
+    "url": "https://scotch.io/bar-talk/getting-to-know-angular-2s-module-ngmodule", 
+    "demo": "",
+    "desc": "" 
+  },
+  { 
+    "name": "Angular Transclusion using ng-content", 
+    "url": "https://scotch.io/tutorials/angular-2-transclusion-using", 
+    "demo": "transclusion",
+    "desc": "" 
+  },
+  { 
+    "name": "Component Inheritance in Angular", 
+    "url": "https://scotch.io/tutorials/component-inheritance-in-angular-2", 
+    "demo": "component-inheritance",
+    "desc": "" 
+  }
+]

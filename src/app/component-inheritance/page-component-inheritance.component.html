@@ -1,0 +1,16 @@
+
+<h1>Parent Component:</h1>
+<hr>
+<simple-pagination page="1" pageCount="5" 
+  previousText="Front" nextText="Back"
+  (pageChanged)="gatherPage($event)">
+</simple-pagination>
+
+<div style="height: 20px;"></div>
+
+<h1>Child Component:</h1>
+<hr>
+<my-pagination page="1" pageCount="5"
+  title="Random Title"
+  (pageChanged)="gatherPage($event)">
+</my-pagination>

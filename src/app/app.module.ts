@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import 'rxjs/Rx';
 
 // routing
 import { appRoutes } from './app.routing';
@@ -22,6 +23,10 @@ import { TRANSLATION1_PROVIDERS, Translate1Pipe,
   Translate1Service, PageSimpleLanguageTranslationPart1Component }   from './simple-language-translation-part-1';
 import { TRANSLATION2_PROVIDERS, Translate2Pipe, 
   Translate2Service, PageSimpleLanguageTranslationPart2Component }   from './simple-language-translation-part-2';
+import { CardComponent, PageTransclusionComponent } from './transclusion';
+import { PageComponentInheritanceComponent, MyPaginationComponent, 
+  SimplePaginationComponent } from './component-inheritance';
+import { PageHomeComponent, HomeService } from './home';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,13 @@ import { TRANSLATION2_PROVIDERS, Translate2Pipe,
     PageSimpleLanguageTranslationPart1Component, Translate1Pipe,
     // Simple Language Translation (Part 2)
     PageSimpleLanguageTranslationPart2Component, Translate2Pipe,
+    // Transclusion using ng-content
+    PageTransclusionComponent, CardComponent,
+    // Component Inheritance
+    PageComponentInheritanceComponent,
+    SimplePaginationComponent, MyPaginationComponent,
+    // home page
+    PageHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +72,10 @@ import { TRANSLATION2_PROVIDERS, Translate2Pipe,
     TRANSLATION1_PROVIDERS, Translate1Service,
     // Simple Language Translation (Part 2)
     TRANSLATION2_PROVIDERS, Translate2Service,
+    // home page
+    HomeService,
   ],
+  schemas: [ NO_ERRORS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

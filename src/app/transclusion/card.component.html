@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    
+    {{ header }}
+    
+    <!--example 6: multislot transclusion -->
+    <!--<ng-content select="card-header"></ng-content>-->
+  </div>
+  
+  <!-- basic transclusion (single slot) -->
+  <ng-content></ng-content>
+  
+  <!--example 1: named tranclusion -->
+  <!--<ng-content select="[card-body]"></ng-content>-->
+  
+  <!--example 2: css class select -->
+  <!--<ng-content select=".card-body"></ng-content>-->
+  
+  <!--example 3: multiple attribute -->
+  <!--<ng-content select="[card][body]"></ng-content>-->
+  
+  <!--example 3a: multiple css class -->
+  <!-- <ng-content select=".card.body"></ng-content> -->
+  
+  <!--example 4: attribute with value -->
+  <!-- <ng-content select="[card-type=body]"></ng-content> -->
+  
+  <!--example 5: html tag -->
+  <!--<ng-content select="card-body"></ng-content>-->
+  
+  <!--example 6: multislot transclusion -->
+  <!-- <ng-content select="card-body"></ng-content> -->
+  
+  <div class="card-footer">
+    {{ footer }}
+    <!--example 6: multislot transclusion -->
+    <!--<ng-content select="card-footer"></ng-content>-->
+  </div>
+</div>

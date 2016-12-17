@@ -9,6 +9,9 @@ import { PageHammerjsComponent } from './hammerjs';
 import { PageCustomValidatorComponent } from './custom-validator';
 import { PageSimpleLanguageTranslationPart1Component }   from './simple-language-translation-part-1';
 import { PageSimpleLanguageTranslationPart2Component }   from './simple-language-translation-part-2';
+import { PageTransclusionComponent } from './transclusion';
+import { PageComponentInheritanceComponent } from './component-inheritance';
+import { PageHomeComponent } from './home';
 
 export const appRoutes: Routes = [
   { path: 'global-pipe', component: PageGlobalPipeComponent },
@@ -21,5 +24,7 @@ export const appRoutes: Routes = [
   { path: 'custom-validator', component: PageCustomValidatorComponent },
   { path: 'simple-language-translation-part-1', component: PageSimpleLanguageTranslationPart1Component },
   { path: 'simple-language-translation-part-2', component: PageSimpleLanguageTranslationPart2Component },
-  // { path: '', redirectTo: '/introducion', pathMatch: 'full' },
+  { path: 'transclusion', component: PageTransclusionComponent },
+  { path: 'component-inheritance', component: PageComponentInheritanceComponent },
+  { path: '', component: PageHomeComponent },
 ];

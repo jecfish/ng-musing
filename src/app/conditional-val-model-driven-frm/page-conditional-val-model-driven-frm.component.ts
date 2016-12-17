@@ -40,75 +40,10 @@ export class PageConditionalValModelDrivenFrmComponent implements OnInit {
     return group;
   }
 
-  subscribePaymentTypeChanges() {
-
-    // controls
-    const pmCtrl = this.myForm.get('paymentMethod');
-
-    // initialize value changes stream
-    const changes$ = pmCtrl.get('type').valueChanges;
-
-    // subscribe to the stream
-    changes$.subscribe(paymentMethodType => {
-
-      if (paymentMethodType === this.PAYMENT_METHOD_TYPE.BANK) {
-        this.setBankValidity();
-        this.clearCardValidity();
-      }
-
-      if (paymentMethodType === this.PAYMENT_METHOD_TYPE.CARD) {
-        this.setCardValidity();
-        this.clearBankValidity();
-      }
-
-    });
-  }
-
-  private clearBankValidity() {
-    const bankCtrl = this.myForm.get('paymentMethod.bank') as FormGroup;
-
-    Object.keys(bankCtrl.controls).forEach(key => {
-      const ctrl = bankCtrl.get(key);
-      ctrl.clearValidators();
-      ctrl.updateValueAndValidity();
-    });
-  }
-
-  private clearCardValidity() {
-    const cardCtrl = this.myForm.get('paymentMethod.card') as FormGroup;
-
-    Object.keys(cardCtrl.controls).forEach(key => {
-      const ctrl = cardCtrl.get(key);
-      ctrl.clearValidators();
-      ctrl.updateValueAndValidity();
-    });
-  }
-
-  private setBankValidity() {
-    const bankCtrl = this.myForm.get('paymentMethod.bank') as FormGroup;
-
-    Object.keys(bankCtrl.controls).forEach(key => {
-      const ctrl = bankCtrl.get(key);
-      ctrl.setValidators(this.initPaymentMethodBankModel()[key][1]);
-      ctrl.updateValueAndValidity();
-    });
-  }
-
-  private setCardValidity() {
-    const cardCtrl = this.myForm.get('paymentMethod.card') as FormGroup;
-
-    Object.keys(cardCtrl.controls).forEach(key => {
-      const ctrl = cardCtrl.get(key);
-      ctrl.setValidators(this.initPaymentMethodCardModel()[key][1]);
-      ctrl.updateValueAndValidity();
-    });
-  }
-
   initPaymentMethodCardModel(): any {
     // you get valid testing credit card from http://www.getcreditcardnumbers.com/
     const cardNoRegex = `^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$`;
     const expiryRegex = `^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$`;
-
 
     // initialize card model
     const model = {
@@ -141,5 +76,45 @@ export class PageConditionalValModelDrivenFrmComponent implements OnInit {
     // call API to save
     // ...
     console.log(model, isValid);
+  }
+
+  subscribePaymentTypeChanges() {
+    // controls
+    const bankCtrl = this.myForm.get('paymentMethod.bank') as FormGroup;
+    const cardCtrl = this.myForm.get('paymentMethod.card') as FormGroup;
+
+    // initialize value changes stream
+    const changes$ = this.myForm.get('paymentMethod.type').valueChanges;
+
+    // subscribe to the stream
+    changes$.subscribe(paymentMethodType => {
+
+      if (paymentMethodType === this.PAYMENT_METHOD_TYPE.BANK) {
+        this.setPaymentMethodValidity(bankCtrl, this.initPaymentMethodBankModel());
+        this.clearPaymentMethodValidity(cardCtrl);
+      }
+
+      if (paymentMethodType === this.PAYMENT_METHOD_TYPE.CARD) {
+        this.setPaymentMethodValidity(cardCtrl, this.initPaymentMethodCardModel());
+        this.clearPaymentMethodValidity(bankCtrl);
+      }
+
+    });
+  }
+
+  private clearPaymentMethodValidity(control: FormGroup) {
+    Object.keys(control.controls).forEach(key => {
+      const ctrl = control.get(key);
+      ctrl.clearValidators();
+      ctrl.updateValueAndValidity();
+    });
+  }
+
+  private setPaymentMethodValidity(control: FormGroup, model) {
+    Object.keys(control.controls).forEach(key => {
+      const ctrl = control.get(key);
+      ctrl.setValidators(model[key][1]);
+      ctrl.updateValueAndValidity();
+    });
   }
 }

@@ -18,6 +18,10 @@ import { PageNestedModelDrivenFrmComponent } from './nested-model-driven-frm';
 import { PageConditionalValModelDrivenFrmComponent } from './conditional-val-model-driven-frm';
 import { PageHammerjsComponent, MyHammerConfig } from './hammerjs';
 import { PageCustomValidatorComponent, EqualValidatorDirective } from './custom-validator';
+import { TRANSLATION1_PROVIDERS, Translate1Pipe, 
+  Translate1Service, PageSimpleLanguageTranslationPart1Component }   from './simple-language-translation-part-1';
+import { TRANSLATION2_PROVIDERS, Translate2Pipe, 
+  Translate2Service, PageSimpleLanguageTranslationPart2Component }   from './simple-language-translation-part-2';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { PageCustomValidatorComponent, EqualValidatorDirective } from './custom-
     // using hammerjs
     PageHammerjsComponent,
     // implement a Custom Validator Directive (Confirm Password)
-    PageCustomValidatorComponent, EqualValidatorDirective
+    PageCustomValidatorComponent, EqualValidatorDirective,
+    // Simple Language Translation (Part 1)
+    PageSimpleLanguageTranslationPart1Component, Translate1Pipe,
+    // Simple Language Translation (Part 2)
+    PageSimpleLanguageTranslationPart2Component, Translate2Pipe,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,11 @@ import { PageCustomValidatorComponent, EqualValidatorDirective } from './custom-
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
-    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
+    { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig },
+    // Simple Language Translation (Part 1)
+    TRANSLATION1_PROVIDERS, Translate1Service,
+    // Simple Language Translation (Part 2)
+    TRANSLATION2_PROVIDERS, Translate2Service,
   ],
   bootstrap: [AppComponent]
 })

@@ -75,7 +75,6 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         addrsF.controls.forEach((val, idx) => {
             const re = this.handleValidations(fields, validationMessages, addrsF.get(idx.toString()) as FormGroup);
             this.addressesErrors = Object.assign(this.addressesErrors, { [idx]: re });
-            console.log({ [idx]: re });
         });
     }
 

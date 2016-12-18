@@ -8,9 +8,12 @@
         <div class="form-group">
           <label>Name</label>
           <input type="text" class="form-control" formControlName="name">
-          <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+          <small *ngIf="formErrors.name" class="text-danger">
+            {{ formErrors.name }}
+          </small>
+          <!--<small *ngIf="!myForm.controls.name.valid" class="text-danger">
               Name is required (minimum 5 characters).
-            </small>
+            </small>-->
         </div>
         <!--addresses-->
         <div formArrayName="addresses">
@@ -23,9 +26,12 @@
               <div class="form-group col-xs-6">
                 <label>street</label>
                 <input type="text" class="form-control" formControlName="street">
-                <small [hidden]="myForm.controls.addresses.controls[i].controls.street.valid" class="text-danger">
-                    Street is required
+                <small *ngIf="addressArrErr[i]?.street" class="text-danger">
+                  {{ addressArrErr[i]?.street }}
                 </small>
+                <!--<small [hidden]="myForm.controls.addresses.controls[i].controls.street.valid" class="text-danger">
+                    Street is required
+                </small>-->
               </div>
               <div class="form-group col-xs-6">
                 <label>postcode</label>

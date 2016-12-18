@@ -14,7 +14,8 @@ import { SimplePaginationComponent } from './simple-pagination.component';
       href="javascript:void(0)" >
       {{ nextText }}
     </a>
-  `
+  `,
+  styleUrls: ['./pagination.component.css']
 })
 export class MyPaginationComponent extends SimplePaginationComponent {
   @Input()

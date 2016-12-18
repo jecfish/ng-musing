@@ -3,78 +3,78 @@
     "name": "Create a Globally Available Custom Pipe in Angular", 
     "url": "https://scotch.io/?p=13431", 
     "demo": "global-pipe",
-    "desc": "" 
+    "desc": "Understanding, creating and using pipe." 
   },
   { 
     "name": "How to Deal with Different Form Controls in Angular", 
     "url": "https://scotch.io/?p=13444", 
     "demo": "diff-form-ctrls",
-    "desc": "" 
+    "desc": "Dealing with different form controls in template-driven form." 
   },
   { 
     "name": "Using Angular's Template-Driven Forms", 
     "url": "https://scotch.io/?p=13446", 
     "demo": "template-driven-frm",
-    "desc": "" 
+    "desc": "What is template-driven form and how to use it." 
   },
   { 
     "name": "Using Angular's Model-Driven Forms", 
     "url": "https://scotch.io/?p=13438", 
     "demo": "model-driven-frm",
-    "desc": "" 
+    "desc": "What is model-driven form and how to use it." 
   },
   { 
     "name": "How to Build Nested Model-driven Forms in Angular", 
     "url": "https://scotch.io/?p=13483", 
     "demo": "nested-model-driven-frm",
-    "desc": "" 
+    "desc": "Handle validatiion and binding in nested model driven form." 
   },
   { 
     "name": "How to Implement Conditional Validation in Angular Model-driven Forms", 
     "url": "https://scotch.io/?p=13497", 
     "demo": "conditional-val-model-driven-frm",
-    "desc": "" 
+    "desc": "Handling conditional validation in Angular Model-driven form." 
   },
   { 
     "name": "Simple Language Translation in Angular (Part 1)", 
     "url": "https://scotch.io/?p=13499", 
-    "demo": "hammerjs",
-    "desc": "" 
+    "demo": "simple-language-translation-part-1",
+    "desc": "A two parts tutorial. Part 1. Implementing translation." 
   },
   { 
     "name": "Simple Language Translation in Angular (Part 2)", 
     "url": "https://scotch.io/?p=13501", 
-    "demo": "simple-language-translation-part-1",
-    "desc": "" 
+    "demo": "simple-language-translation-part-2",
+    "desc": "A two parts tutorial. Part 2. Implementing translation." 
   },
   { 
     "name": "Using HammerJS (Touch gesture) in Angular", 
     "url": "https://scotch.io/?p=13550", 
-    "demo": "simple-language-translation-part-2",
-    "desc": "" 
+    "demo": "hammerjs",
+    "desc": "Swipe left, swipe right in Angular." 
   },
   { 
     "name": "How to Implement a Custom Validator Directive (Confirm Password) in Angular", 
     "url": "https://scotch.io/?p=13552",
     "demo": "custom-validator", 
-    "desc": "" 
+    "desc": "Create a validator to handle confirm password." 
   },
   { 
     "name": "Getting to Know Angular's Module: @NgModule", 
     "url": "https://scotch.io/bar-talk/getting-to-know-angular-2s-module-ngmodule", 
     "demo": "",
-    "desc": "" 
+    "desc": "Understanding Angular Module" 
   },
   { 
     "name": "Angular Transclusion using ng-content", 
     "url": "https://scotch.io/tutorials/angular-2-transclusion-using", 
     "demo": "transclusion",
-    "desc": "" 
+    "desc": "What is transclusion. Handling content projection in Angular." 
   },
   { 
     "name": "Component Inheritance in Angular", 
     "url": "https://scotch.io/tutorials/component-inheritance-in-angular-2", 
     "demo": "component-inheritance",
-    "desc": "" 
+    "desc": "Component is inheritable. Explaining component inheritance with a simple pagination example." 
   }
 ]

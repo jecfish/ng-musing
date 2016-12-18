@@ -7,7 +7,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     <button (click)="nextPage()" [disabled]="!hasNext()">{{ nextText }}</button>
     
     <p>page {{ page }} of {{ pageCount }}</p>
-  `
+  `,
+  styleUrls: ['./pagination.component.css']
 })
 export class SimplePaginationComponent {
 

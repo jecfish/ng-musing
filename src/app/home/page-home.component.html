@@ -1,5 +1,8 @@
-<ul>
-  <li *ngFor="let item of articles">
-    <a [href]="item.url">{{ item.name }}</a>
-  </li>
-</ul>
+<div class="container">
+  <div *ngFor="let item of articles" class="card card-block">
+    <h4 class="card-title">{{ item.name }}</h4>
+    <p class="card-text">{{ item.desc }}</p>
+    <a [href]="item.url" target="_blank" class="card-link">Scotch.io Tutorial</a>
+    <a *ngIf="item.demo" [routerLink]="item.demo" class="card-link">Demo</a>
+  </div>
+</div>

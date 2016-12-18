@@ -1,0 +1,19 @@
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+a {
+  margin: 10px;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+  color: grey;
+}

@@ -40,7 +40,7 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         this.onFormValueChanged();
 
         // handle addresses errors
-        this.onAddrValueChanged();
+        this.onAddrsValueChanged();
     }
 
     /* Update Main Form Validations */
@@ -60,8 +60,8 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         this.formErrors = Object.assign(this.formErrors, re);
     }
 
-    /* Update Each Address Validation */
-    onAddrValueChanged() {
+    /* Update Addresses Validation */
+    onAddrsValueChanged() {
         const addrsF = this.myForm.get('addresses') as FormArray;
 
         // setup fields to validate and the messages

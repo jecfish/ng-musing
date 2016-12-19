@@ -77,16 +77,17 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         // avoid mutation
         const fields = Object.assign({}, fs);
 
-        for (const field in fields) {
+        Object.keys(fields).forEach(field => {
             const control = fg.get(field);
 
             if (control && !control.valid) {
                 const messages = validationMessages[field];
-                for (const key in control.errors) {
+
+                Object.keys(control.errors).forEach(key => {
                     fields[field] += messages[key] + ' ';
-                }
+                })
             }
-        }
+        })
 
         return fields;
     }

@@ -82,5 +82,11 @@
     "url": "", 
     "demo": "dynamic-form-array-val",
     "desc": "Handle form array validation dynamically and reactively." 
+  },
+  { 
+    "name": "Responsive Equal Height with Angular Directive", 
+    "url": "https://scotch.io/tutorials/responsive-equal-height-with-angular-directive", 
+    "demo": "same-height",
+    "desc": "Making element same height." 
   }
 ]

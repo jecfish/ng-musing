@@ -1,0 +1,43 @@
+<main class="container">
+    <h2>Malaysia States</h2>
+
+    <!-- Example 1: Use it in the same component -->
+    <div class="row" myMatchHeight="card">
+        <div class="col-sm-4" *ngFor="let state of list">
+            <div class="card card-block">
+                <h4 class="card-title">{{ state.title }}</h4>
+                <p class="card-text">
+                    {{ state.content }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example 2: Use it in different component -->
+    <!--<div class="row" myMatchHeight="card">
+        <div class="col-sm-4" *ngFor="let state of list">
+            <card-same-height [title]="state.title" [content]="state.content">
+            </card-same-height>
+        </div>
+    </div>-->
+
+    <!-- Example 3: Use it with different elements -->
+    <!--<div myMatchHeight="half">
+        <div class="half">
+            <p>
+                Cats are similar in anatomy to the other felids, with a strong, flexible body, 
+                quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. 
+                Cat senses fit a crepuscular and predatory ecological niche. 
+                Cats can hear sounds too faint or too high in frequency for human ears, 
+                such as those made by mice and other small animals.
+            </p>
+        </div>
+        <div class="half">
+            <p>
+                The domestic dog (Canis lupus familiaris or Canis familiaris)[2] is a member of 
+                genus Canis (canines) that forms part of the wolf-like canids,[3] 
+                and is the most widely abundant carnivore.
+            </p>
+        </div>
+    </div>-->
+</main>

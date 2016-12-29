@@ -36,7 +36,6 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
     onValChanges(data) {
         if (!this.myForm) return;
 
-        // handle main form errors
         this.onFormValueChanged();
 
         // handle addresses errors

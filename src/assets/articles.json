@@ -76,5 +76,11 @@
     "url": "https://scotch.io/tutorials/component-inheritance-in-angular-2", 
     "demo": "component-inheritance",
     "desc": "Component is inheritable. Explaining component inheritance with a simple pagination example." 
+  },
+  { 
+    "name": "Dynamic Form Array Validation in Model Driven Form", 
+    "url": "", 
+    "demo": "dynamic-form-array-val",
+    "desc": "Handle form array validation dynamically and reactively." 
   }
 ]

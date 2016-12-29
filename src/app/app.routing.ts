@@ -12,6 +12,8 @@ import { PageSimpleLanguageTranslationPart2Component }   from './simple-language
 import { PageTransclusionComponent } from './transclusion';
 import { PageComponentInheritanceComponent } from './component-inheritance';
 import { PageHomeComponent } from './home';
+import { PageDepInjectComponent } from './dep-inject';
+import { PageFormArrayDynValComponent } from './form-array-dyn-val';
 
 export const appRoutes: Routes = [
   { path: 'global-pipe', component: PageGlobalPipeComponent },
@@ -26,5 +28,7 @@ export const appRoutes: Routes = [
   { path: 'simple-language-translation-part-2', component: PageSimpleLanguageTranslationPart2Component },
   { path: 'transclusion', component: PageTransclusionComponent },
   { path: 'component-inheritance', component: PageComponentInheritanceComponent },
+  { path: 'dependency-injection', component: PageDepInjectComponent },
+  { path: 'dynamic-form-array-val', component: PageFormArrayDynValComponent },
   { path: '', component: PageHomeComponent },
 ];

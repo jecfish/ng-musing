@@ -30,6 +30,8 @@ import { PageHomeComponent, HomeService } from './home';
 import { DepAService, DepBService,
   DepCtnComponent, DepInjectComponent, PageDepInjectComponent } from './dep-inject';
 import { PageFormArrayDynValComponent } from './form-array-dyn-val';
+import { PageSameHeightComponent, CardSameHeightComponent, 
+  MatchHeightDirective, ThirdComponent } from './same-height';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,9 @@ import { PageFormArrayDynValComponent } from './form-array-dyn-val';
     PageDepInjectComponent, DepCtnComponent, DepInjectComponent,
     // Dynamic Form Array Validation in Model Driven Form
     PageFormArrayDynValComponent,
+    // Same height component
+    PageSameHeightComponent, CardSameHeightComponent, 
+    MatchHeightDirective, ThirdComponent
 
   ],
   imports: [

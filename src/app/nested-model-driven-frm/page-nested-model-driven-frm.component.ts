@@ -40,15 +40,18 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         this.onFormValueChanged();
 
         // handle addresses errors
-        this.onAddrValueChanged();
+        const addrs = this.myForm.get('addresses') as FormArray;
+
+        // handle each address errors
+        addrs.controls.forEach((val, idx) => {
+            this.onAddrValueChanged(idx);
+        });
     }
 
     /* Update Main Form Validations */
     onFormValueChanged() {
-        const custF = this.myForm;
-
         // setup fields to validate and the messages
-        const fields = { name: '' };
+        const e = { name: '' }
         const validationMessages = {
             name: {
                 required: 'it is required',
@@ -56,45 +59,42 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
             }
         };
 
-        const re = this.handleValidations(fields, validationMessages, custF);
-        this.formErrors = Object.assign(this.formErrors, re);
-    }
-
-    /* Update Each Address Validation */
-    onAddrValueChanged() {
-        const addrsF = this.myForm.get('addresses') as FormArray;
-
-        // setup fields to validate and the messages
-        const fields = { street: '' };
-        const validationMessages = {
-            street: {
-                required: 'my god'
-            }
-        };
-
-        addrsF.controls.forEach((val, idx) => {
-            const re = this.handleValidations(fields, validationMessages, addrsF.get(idx.toString()) as FormGroup);
-            this.addressesErrors = Object.assign(this.addressesErrors, { [idx]: re });
-            console.log({ [idx]: re });
-        });
-    }
-
-    handleValidations(fs, validationMessages, fg: FormGroup) {
-        // avoid mutation
-        const fields = Object.assign({}, fs);
-
-        for (const field in fields) {
-            const control = fg.get(field);
+        for (const field in e) {
+            const control = this.myForm.get(field);
 
             if (control && !control.valid) {
                 const messages = validationMessages[field];
                 for (const key in control.errors) {
-                    fields[field] += messages[key] + ' ';
+                    e[field] += messages[key] + ' ';
                 }
             }
         }
 
-        return fields;
+        this.formErrors = Object.assign(this.formErrors, e);
+    }
+
+    /* Update Each Address Validation */
+    onAddrValueChanged(idx) {
+        // setup fields to validate and the messages
+        const e = { street: '' }
+        const validationMessages = {
+            street: {
+                required: 'my god'
+            }
+        }
+
+        for (const field in e) {
+            const control = this.myForm.get(`addresses.${idx}.${field}`);
+
+            if (control && !control.valid) {
+                const messages = validationMessages[field];
+                for (const key in control.errors) {
+                    e[field] += messages[key] + ' ';
+                }
+            }
+        }
+
+        this.addressesErrors = Object.assign(this.addressesErrors, { [idx]: e });
     }
 
     initAddress() {

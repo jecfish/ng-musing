@@ -27,6 +27,9 @@ import { CardComponent, PageTransclusionComponent } from './transclusion';
 import { PageComponentInheritanceComponent, MyPaginationComponent, 
   SimplePaginationComponent } from './component-inheritance';
 import { PageHomeComponent, HomeService } from './home';
+import { DepAService, DepBService,
+  DepCtnComponent, DepInjectComponent, PageDepInjectComponent } from './dep-inject';
+import { PageFormArrayDynValComponent } from './form-array-dyn-val';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,12 @@ import { PageHomeComponent, HomeService } from './home';
     PageComponentInheritanceComponent,
     SimplePaginationComponent, MyPaginationComponent,
     // home page
-    PageHomeComponent
+    PageHomeComponent,
+    // dependency inject
+    PageDepInjectComponent, DepCtnComponent, DepInjectComponent,
+    // Dynamic Form Array Validation in Model Driven Form
+    PageFormArrayDynValComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -74,6 +82,11 @@ import { PageHomeComponent, HomeService } from './home';
     TRANSLATION2_PROVIDERS, Translate2Service,
     // home page
     HomeService,
+    // dependency injection
+    DepAService, 
+    // { provide: DepAService, useValue: { getGreeting(name) { return 'yahoo ' + name; } } },
+    // { provide: DepAService, useClass:  class { getGreeting(name) { return 'class ' + name; } } },
+    // DepBService
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   bootstrap: [AppComponent]

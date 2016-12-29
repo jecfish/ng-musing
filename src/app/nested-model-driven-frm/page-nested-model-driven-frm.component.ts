@@ -16,7 +16,7 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
 
     ngOnInit() {
         this.myForm = this._fb.group({
-            name: ['111', [Validators.required, Validators.minLength(5)]],
+            name: ['', [Validators.required, Validators.minLength(5)]],
             addresses: this._fb.array([
                 this.initAddress(),
             ])
@@ -25,7 +25,12 @@ export class PageNestedModelDrivenFrmComponent implements OnInit {
         this.myForm.valueChanges.subscribe(x => this.onValChanges(x));
 
         // HACK: trigger value changes immediately
-        this.myForm.patchValue({});
+        this.myForm.setValue({
+            name: '',
+            addresses: [
+                { street: '', postcode: '' }
+            ]
+        })
     }
 
     onValChanges(data) {

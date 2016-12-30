@@ -90,8 +90,8 @@
     "desc": "Making element same height." 
   },
   { 
-    "name": "Three ways to ", 
-    "url": "https://scotch.io/tutorials/responsive-equal-height-with-angular-directive", 
+    "name": "3 ways to Pass Async Data to Angular Child Component ", 
+    "url": "https://scotch.io/tutorials/3-ways-to-pass-async-data-to-angular-child-component", 
     "demo": "three-ways",
     "desc": "Three ways" 
   }

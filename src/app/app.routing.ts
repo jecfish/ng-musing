@@ -15,6 +15,7 @@ import { PageHomeComponent } from './home';
 import { PageDepInjectComponent } from './dep-inject';
 import { PageFormArrayDynValComponent } from './form-array-dyn-val';
 import { PageSameHeightComponent } from './same-height';
+import { PageThreeWaysComponent } from './three-ways';
 
 export const appRoutes: Routes = [
   { path: 'global-pipe', component: PageGlobalPipeComponent },
@@ -32,5 +33,6 @@ export const appRoutes: Routes = [
   { path: 'dependency-injection', component: PageDepInjectComponent },
   { path: 'dynamic-form-array-val', component: PageFormArrayDynValComponent },
   { path: 'same-height', component: PageSameHeightComponent },
+  { path: 'three-ways', component: PageThreeWaysComponent },
   { path: '', component: PageHomeComponent },
 ];

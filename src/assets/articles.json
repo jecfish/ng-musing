@@ -88,5 +88,11 @@
     "url": "https://scotch.io/tutorials/responsive-equal-height-with-angular-directive", 
     "demo": "same-height",
     "desc": "Making element same height." 
+  },
+  { 
+    "name": "Three ways to ", 
+    "url": "https://scotch.io/tutorials/responsive-equal-height-with-angular-directive", 
+    "demo": "three-ways",
+    "desc": "Three ways" 
   }
 ]

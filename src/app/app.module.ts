@@ -32,6 +32,8 @@ import { DepAService, DepBService,
 import { PageFormArrayDynValComponent } from './form-array-dyn-val';
 import { PageSameHeightComponent, CardSameHeightComponent, 
   MatchHeightDirective, ThirdComponent } from './same-height';
+import { PageThreeWaysComponent, BloggerComponent, 
+  Posts1Component, Posts2Component, Posts3Component } from './three-ways';
 
 @NgModule({
   declarations: [
@@ -69,8 +71,10 @@ import { PageSameHeightComponent, CardSameHeightComponent,
     PageFormArrayDynValComponent,
     // Same height component
     PageSameHeightComponent, CardSameHeightComponent, 
-    MatchHeightDirective, ThirdComponent
-
+    MatchHeightDirective, ThirdComponent,
+    // Three ways
+    PageThreeWaysComponent, BloggerComponent, Posts1Component,
+    Posts2Component, Posts3Component,
   ],
   imports: [
     BrowserModule,

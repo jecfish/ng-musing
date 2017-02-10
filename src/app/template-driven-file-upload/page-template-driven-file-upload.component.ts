@@ -46,7 +46,6 @@ export class PageTemplateDrivenFileUploadComponent {
     this.currentStatus = this.STATUS_SAVING;
     this._svc.upload(formData)
       .take(1)
-      .delay(1500)
       .subscribe(x => {
         this.uploadedFiles = [].concat(x);
         console.log(x);

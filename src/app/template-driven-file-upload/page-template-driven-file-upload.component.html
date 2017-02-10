@@ -1,0 +1,40 @@
+<div class="container">
+  <!--UPLOAD-->
+  <form #f="ngForm" enctype="multipart/form-data" novalidate (ngSubmit)="save()" 
+    *ngIf="currentStatus === STATUS_INITIAL || currentStatus === STATUS_SAVING">
+    <h1>Upload images</h1>
+    <div class="dropbox">
+      <input type="file" multiple
+        [name]="uploadFieldName" (change)="filesChange($event.target.files)" 
+        [disabled]="isSaving" accept="image/*" #photos>
+      <p *ngIf="currentStatus === STATUS_INITIAL">
+        Drag your file(s) here to begin<br>
+        or click to browse
+      </p>
+      <p *ngIf="currentStatus === STATUS_SAVING">
+        Uploading {{ photos.files.length }} files... 
+      </p>
+    </div>
+  </form>
+  <!--SUCCESS-->
+  <div class="margin-20" *ngIf="currentStatus === STATUS_SUCCESS">
+    <h2>Uploaded {{ uploadedFiles.length }} file(s) successfully.</h2>
+    <p>
+      <a href="javascript:void(0)" (click)="reset()">Upload again</a>
+    </p>
+    <ul class="list-unstyled">
+      <li *ngFor="let item of uploadedFiles">
+        <img [src]="item.url" class="img-responsive img-thumbnail" 
+          [alt]="item.originalName">
+      </li>
+    </ul>
+  </div>
+  <!--FAILED-->
+  <div class="margin-20" *ngIf="currentStatus === STATUS_FAILED">
+    <h2>Uploaded failed.</h2>
+    <p>
+      <a href="javascript:void(0)" (click)="reset()">Try again</a>
+    </p>
+    <pre>{{ uploadError | json }}</pre>
+  </div>
+</div>

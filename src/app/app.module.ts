@@ -34,6 +34,8 @@ import { PageSameHeightComponent, CardSameHeightComponent,
   MatchHeightDirective, ThirdComponent } from './same-height';
 import { PageThreeWaysComponent, BloggerComponent, 
   Posts1Component, Posts2Component, Posts3Component } from './three-ways';
+import { PageTemplateDrivenFileUploadComponent, FileUploadFakeService, 
+  FileUploadService } from './template-driven-file-upload';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { PageThreeWaysComponent, BloggerComponent,
     // Three ways
     PageThreeWaysComponent, BloggerComponent, Posts1Component,
     Posts2Component, Posts3Component,
+    // Template Driven File Upload
+    PageTemplateDrivenFileUploadComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,6 +95,11 @@ import { PageThreeWaysComponent, BloggerComponent,
     TRANSLATION2_PROVIDERS, Translate2Service,
     // home page
     HomeService,
+    // Template Driven File Upload
+    // use real for your own project
+    // use fake for demo
+    // { provide: FileUploadService, useClass: FileUploadService },
+    { provide: FileUploadService, useClass: FileUploadFakeService },
     // dependency injection
     DepAService, 
     // { provide: DepAService, useValue: { getGreeting(name) { return 'yahoo ' + name; } } },

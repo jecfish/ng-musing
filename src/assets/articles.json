@@ -94,5 +94,11 @@
     "url": "https://scotch.io/tutorials/3-ways-to-pass-async-data-to-angular-child-component", 
     "demo": "three-ways",
     "desc": "Three ways" 
+  },
+  { 
+    "name": "Template driven file upload ", 
+    "url": "", 
+    "demo": "template-driven-file-upload",
+    "desc": "Template driven file upload" 
   }
 ]

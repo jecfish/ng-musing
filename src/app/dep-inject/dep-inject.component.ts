@@ -19,7 +19,7 @@ export class DepInjectComponent implements OnInit {
         this.greeting = this.depSvc.getGreeting('jecelyn');
         // console.log(this.engine)
 
-        this.depSvc.getUsers()
-            .subscribe(x => console.log(x))
+        // this.depSvc.getUsers()
+        //     .subscribe(x => console.log(x))
     }
 }

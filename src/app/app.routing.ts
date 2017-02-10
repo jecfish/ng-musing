@@ -16,6 +16,7 @@ import { PageDepInjectComponent } from './dep-inject';
 import { PageFormArrayDynValComponent } from './form-array-dyn-val';
 import { PageSameHeightComponent } from './same-height';
 import { PageThreeWaysComponent } from './three-ways';
+import { PageTemplateDrivenFileUploadComponent } from './template-driven-file-upload';
 
 export const appRoutes: Routes = [
   { path: 'global-pipe', component: PageGlobalPipeComponent },
@@ -34,5 +35,6 @@ export const appRoutes: Routes = [
   { path: 'dynamic-form-array-val', component: PageFormArrayDynValComponent },
   { path: 'same-height', component: PageSameHeightComponent },
   { path: 'three-ways', component: PageThreeWaysComponent },
+  { path: 'template-driven-file-upload', component: PageTemplateDrivenFileUploadComponent },
   { path: '', component: PageHomeComponent },
 ];

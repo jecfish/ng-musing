@@ -1,12 +1,12 @@
 <div class="container">
   <!--UPLOAD-->
-  <form #f="ngForm" enctype="multipart/form-data" novalidate (ngSubmit)="save()" 
+  <form #f="ngForm" enctype="multipart/form-data" novalidate
     *ngIf="currentStatus === STATUS_INITIAL || currentStatus === STATUS_SAVING">
     <h1>Upload images</h1>
     <div class="dropbox">
       <input type="file" multiple
-        [name]="uploadFieldName" (change)="filesChange($event.target.files)" 
-        [disabled]="isSaving" accept="image/*" #photos>
+        [name]="uploadFieldName" (change)="filesChange($event.target.name, $event.target.files)" 
+        [disabled]="currentStatus === STATUS_SAVING" accept="image/*" #photos>
       <p *ngIf="currentStatus === STATUS_INITIAL">
         Drag your file(s) here to begin<br>
         or click to browse

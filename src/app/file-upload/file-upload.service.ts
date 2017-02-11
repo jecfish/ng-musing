@@ -4,7 +4,7 @@ import { Http, RequestOptionsArgs, Headers } from '@angular/http';
 @Injectable()
 export class FileUploadService {
 
-    baseUrl = 'http://localhost:3000';
+    baseUrl = 'http://localhost:3001';
 
     constructor(private _http: Http) { }
 

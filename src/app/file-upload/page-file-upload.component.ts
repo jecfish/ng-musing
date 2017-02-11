@@ -1,3 +1,5 @@
+// page-file-upload.component.ts
+
 import { Component } from '@angular/core';
 import { FileUploadService } from './file-upload.service';
 
@@ -19,19 +21,23 @@ export class PageFileUploadComponent {
   readonly STATUS_FAILED = 3;
 
   constructor(private _svc: FileUploadService) {
-    this.currentStatus = this.STATUS_INITIAL;
+    this.reset(); // set initial state
   }
 
-  filesChange(fileList: FileList) {
+  filesChange(fieldName: string, fileList: FileList) {
+    // handle file changes
     const formData = new FormData();
+
     if (!fileList.length) return;
 
+    // append the files to FormData
     Array
       .from(Array(fileList.length).keys())
       .map(x => {
-        formData.append(this.uploadFieldName, fileList[x], fileList[x].name);
+        formData.append(fieldName, fileList[x], fileList[x].name);
       });
 
+    // save it
     this.save(formData);
   }
 
@@ -42,13 +48,13 @@ export class PageFileUploadComponent {
   }
 
   save(formData: FormData) {
-    const url = 'http://localhost:3001/photos/upload';
+    // upload data to the server
     this.currentStatus = this.STATUS_SAVING;
     this._svc.upload(formData)
       .take(1)
+      .delay(1500) // DEV ONLY: delay 1.5s to see the changes
       .subscribe(x => {
         this.uploadedFiles = [].concat(x);
-        console.log(x);
         this.currentStatus = this.STATUS_SUCCESS;
       }, err => {
         this.uploadError = err;

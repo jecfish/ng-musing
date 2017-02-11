@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FileUploadService } from './file-upload.service';
 
 @Component({
-  selector: 'page-template-driven-file-upload',
-  templateUrl: './page-template-driven-file-upload.component.html',
-  styleUrls: ['./page-template-driven-file-upload.component.css']
+  selector: 'page-file-upload',
+  templateUrl: './page-file-upload.component.html',
+  styleUrls: ['./page-file-upload.component.css']
 })
-export class PageTemplateDrivenFileUploadComponent {
+export class PageFileUploadComponent {
 
   uploadedFiles = [];
   uploadError;

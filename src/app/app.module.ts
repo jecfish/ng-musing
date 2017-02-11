@@ -34,8 +34,8 @@ import { PageSameHeightComponent, CardSameHeightComponent,
   MatchHeightDirective, ThirdComponent } from './same-height';
 import { PageThreeWaysComponent, BloggerComponent, 
   Posts1Component, Posts2Component, Posts3Component } from './three-ways';
-import { PageTemplateDrivenFileUploadComponent, FileUploadFakeService, 
-  FileUploadService } from './template-driven-file-upload';
+import { PageFileUploadComponent, FileUploadFakeService, 
+  FileUploadService } from './file-upload';
 
 @NgModule({
   declarations: [
@@ -78,7 +78,7 @@ import { PageTemplateDrivenFileUploadComponent, FileUploadFakeService,
     PageThreeWaysComponent, BloggerComponent, Posts1Component,
     Posts2Component, Posts3Component,
     // Template Driven File Upload
-    PageTemplateDrivenFileUploadComponent,
+    PageFileUploadComponent,
   ],
   imports: [
     BrowserModule,

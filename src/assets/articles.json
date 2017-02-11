@@ -96,9 +96,9 @@
     "desc": "Three ways" 
   },
   { 
-    "name": "Template driven file upload ", 
-    "url": "", 
-    "demo": "template-driven-file-upload",
-    "desc": "Template driven file upload" 
+    "name": "How to Handle File Upload in Angular", 
+    "url": "https://scotch.io/tutorials/how-to-handle-file-upload-in-angular", 
+    "demo": "file-upload",
+    "desc": "Handle file upload in Angular" 
   }
 ]

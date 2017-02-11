@@ -16,7 +16,7 @@ export class FileUploadFakeService {
         return Observable.fromPromise(Promise.all(promises));
     }
 
-    getImage(file: File) {
+    private getImage(file: File) {
         return new Promise((resolve, reject) => {
             const fReader = new FileReader();
             const img = document.createElement('img');
@@ -30,7 +30,7 @@ export class FileUploadFakeService {
         })
     }
 
-    getBase64Image(img) {
+    private getBase64Image(img) {
         const canvas = document.createElement('canvas');
         canvas.width = img.width;
         canvas.height = img.height;

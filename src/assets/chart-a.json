@@ -93,7 +93,7 @@
   },
   { 
     "name": "Mark",
-    "mode": "happy"
+    "mode": "sad"
   },
   { 
     "name": "Russell",
@@ -101,31 +101,31 @@
   },
   { 
     "name": "Jennifer",
-    "mode": "happy"
+    "mode": "sad"
   },
   { 
     "name": "Sarah",
-    "mode": "happy"
+    "mode": "sad"
   },
   { 
     "name": "Vanessa",
-    "mode": "happy"
+    "mode": "sad"
   },
   { 
     "name": "Rihanna",
-    "mode": "happy"
+    "mode": "sad"
   },
   { 
     "name": "Taylor",
-    "mode": "happy"
+    "mode": "wow"
   },
   { 
     "name": "Yasmine",
-    "mode": "happy"
+    "mode": "wow"
   },
   { 
     "name": "Jasmine",
-    "mode": "happy"
+    "mode": "wow"
   },
   { 
     "name": "Hannah",
@@ -145,11 +145,11 @@
   },
   { 
     "name": "Cathy",
-    "mode": "happy"
+    "mode": "wow"
   },
   { 
     "name": "Cat",
-    "mode": "happy"
+    "mode": "wow"
   },
   { 
     "name": "Zara",
@@ -185,7 +185,7 @@
   },
   { 
     "name": "Vannie",
-    "mode": "angry"
+    "mode": "wow"
   },
   { 
     "name": "Claire",

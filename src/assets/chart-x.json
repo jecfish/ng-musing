@@ -1,313 +1,313 @@
 [
   { 
     "name": "Jenna",
-    "group": "beginner",
+    "group": "gold",
     "balance": 42.3,
     "owe": 33.2
   },
   { 
     "name": "Jenny",
-    "group": "beginner",
+    "group": "gold",
     "balance": 48.6,
     "owe": 39.2
   },
   { 
     "name": "Larica",
-    "group": "beginner",
+    "group": "gold",
     "balance": 100
     "owe": 23.1
   },
   { 
     "name": "Lorence",
-    "group": "beginner",
+    "group": "gold",
     "balance": 1222.3,
     "owe": 303.2
   },
   { 
     "name": "Alaric",
-    "group": "beginner",
+    "group": "gold",
     "balance": 424.3,
     "owe": 133.2
   },
   { 
     "name": "Maria",
-    "group": "beginner",
+    "group": "gold",
     "balance": 462.45,
     "owe": 733.2
   },
   { 
     "name": "Gunner",
-    "group": "beginner",
+    "group": "gold",
     "balance": 425.3,
     "owe": 334.2
   },
   { 
     "name": "Henry",
-    "group": "beginner",
+    "group": "gold",
     "balance": 842.6,
     "owe": 283.2
   },
   { 
     "name": "Chris",
-    "group": "beginner",
+    "group": "gold",
     "balance": 212.3,
     "owe": 58.2
   },
   { 
     "name": "Jean",
-    "group": "beginner",
+    "group": "gold",
     "balance": 432.3,
     "owe": 349.2
   },
   { 
     "name": "Christine",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 17.8,
     "owe": 90.5
   },
   { 
     "name": "Chritina",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 175.8,
     "owe": 940.5
   },
   { 
     "name": "Fenny",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 217.8,
     "owe": 690.5
   },
   { 
     "name": "Rainie",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 417.8,
     "owe": 92.5
   },
   { 
     "name": "Rene",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 970.8,
     "owe": 390.5
   },
   { 
     "name": "Wendy",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 117.8,
     "owe": 98.5
   },
   { 
     "name": "Lydia",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 317.8,
     "owe": 94.5
   },
   { 
     "name": "Dean",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 147.8,
     "owe": 120.5
   },
   { 
     "name": "Darren",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 37.6,
     "owe": 25.7
   },
   { 
     "name": "Adrian",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 317.6,
     "owe": 125.7
   },
   { 
     "name": "Nick",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 3137.6,
     "owe": 245.7
   },
   { 
     "name": "Nicholas",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 837.6,
     "owe": 257.7
   },
   { 
     "name": "Shawn",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 437.6,
     "owe": 325.7
   },
   { 
     "name": "Mark",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 397.6,
     "owe": 26.5
   },
   { 
     "name": "Russell",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 537.6,
     "owe": 215.7
   },
   { 
     "name": "Jennifer",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 37.6,
     "owe": 123.6
   },
   { 
     "name": "Sarah",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 537.6,
     "owe": 115.7
   },
   { 
     "name": "Vanessa",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 437.6,
     "owe": 15.7
   },
   { 
     "name": "Rihanna",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 937.6,
     "owe": 425.7
   },
   { 
     "name": "Taylor",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 387.6,
     "owe": 255.7
   },
   { 
     "name": "Yasmine",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 837.6,
     "owe": 250.7
   },
   { 
     "name": "Jasmine",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 307.6,
     "owe": 205.7
   },
   { 
     "name": "Hannah",
-    "group": "intermediate",
+    "group": "silver",
     "balance": 2137.6,
     "owe": 415.7
   },
   { 
     "name": "Jimmy",
-    "group": "beginner",
+    "group": "gold",
     "balance": 24.1,
     "owe": 13.6
   },
   { 
     "name": "Una",
-    "group": "beginner",
+    "group": "gold",
     "balance": 224.1,
     "owe": 18.6
   },
   { 
     "name": "Yuna",
-    "group": "beginner",
+    "group": "gold",
     "balance": 324.1,
     "owe": 123.6
   },
   { 
     "name": "Cathy",
-    "group": "beginner",
+    "group": "gold",
     "balance": 924.1,
     "owe": 138.6
   },
   { 
     "name": "Cat",
-    "group": "beginner",
+    "group": "gold",
     "balance": 249.1,
     "owe": 137.8
   },
   { 
     "name": "Zara",
-    "group": "beginner",
+    "group": "gold",
     "balance": 724.1,
     "owe": 1389.6
   },
   { 
     "name": "Dylan",
-    "group": "beginner",
+    "group": "gold",
     "balance": 1324.1,
     "owe": 43.6
   },
   { 
     "name": "Bonnie",
-    "group": "beginner",
+    "group": "gold",
     "balance": 244.1,
     "owe": 3.6
   },
   { 
     "name": "Bunny",
-    "group": "beginner",
+    "group": "gold",
     "balance": 23.1,
     "owe": 18.6
   },
   { 
     "name": "Nancy",
-    "group": "beginner",
+    "group": "gold",
     "balance": 264.1,
     "owe": 134.6
   },
   { 
     "name": "Mango",
-    "group": "beginner",
+    "group": "gold",
     "balance": 240.1,
     "owe": 103.8
   },
   { 
     "name": "Mandy",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 80.1,
     "owe": 17.3
   },
   { 
     "name": "Amanda",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 180.1,
     "owe": 174.3
   },
   { 
     "name": "Vannie",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 830.1,
     "owe": 17.4
   },
   { 
     "name": "Claire",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 809.1,
     "owe": 517.3
   },
   { 
     "name": "Dexter",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 83.1,
     "owe": 97.3
   },
   { 
     "name": "Rainbow",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 180.1,
     "owe": 175.3
   },
   { 
     "name": "Penny",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 182.1,
     "owe": 16.3
   },
   { 
     "name": "Perry",
-    "group": "advanced",
+    "group": "platinum",
     "balance": 3480.1,
     "owe": 1117.3
   }

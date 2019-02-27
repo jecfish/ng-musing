@@ -38,7 +38,7 @@ export class Posts3Component implements OnInit {
         this._data
             .takeWhile(() => !this.groupPosts) // unsubscribe once groupPosts has value
             .subscribe(x => {
-                this.groupPosts = this.groupByCategory(this.data);
+                this.groupPosts = this.groupByCategory(x);
             });
     }
 
